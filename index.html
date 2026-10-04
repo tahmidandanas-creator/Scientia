@@ -3,206 +3,270 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Scientia — Learn Math, Physics & Chemistry by Playing</title>
 	<meta name="google-site-verification" content="y2Q6Kpm0nWdccgpcopyJ7eLYfKuViRFq-VtMoVpLxbQ" />
+  <title>Scientia — Learn Math, Physics & Chemistry by Playing</title>
   <meta name="description" content="Scientia: Interactive 2D simulations and games for Math, Physics, and Chemistry. Free for everyone.">
+  <meta name="theme-color" content="#0b1220">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- ===== HEADER / NAV ===== -->
-  <header class="hero">
-    <nav class="navbar">
-      <div class="logo">
-        <span class="logo-mark">∑</span>
-        <span class="logo-text">Scientia</span>
-      </div>
-      <ul class="nav-links">
-        <li><a href="#subjects">Subjects</a></li>
-        <li><a href="#featured">Simulations</a></li>
-        <li><a href="#about">About</a></li>
-      </ul>
-    </nav>
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar">
+    <button class="logo" onclick="showScreen('home')" aria-label="Scientia home">
+      <span class="logo-mark">∑</span>
+      <span class="logo-text">Scientia</span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="#home" onclick="showScreen('home'); return false;">Home</a></li>
+      <li><a href="#subjects" onclick="showScreen('subjects'); return false;">Subjects</a></li>
+      <li><a href="#about" onclick="showScreen('about'); return false;">About</a></li>
+    </ul>
+  </nav>
 
+  <!-- ============================================================
+       SCREEN 1: HOME
+  ============================================================= -->
+  <section id="home" class="screen active">
     <div class="hero-content">
       <div class="hero-badge">✨ Free · No install · Works in your browser</div>
       <h1>Learn by <span class="gradient-text">Playing</span></h1>
       <p>Interactive 2D simulations for Math, Physics & Chemistry — built for curious minds.</p>
-      <a href="#subjects" class="btn-primary">Start Exploring →</a>
+      <button class="btn-primary" onclick="showScreen('subjects')">Start Exploring →</button>
     </div>
-
-    <!-- Floating science icons decoration -->
-    <div class="hero-bg">
-      <span>π</span>
-      <span>⚛</span>
-      <span>∑</span>
-      <span>🧪</span>
-      <span>∫</span>
-      <span>⚗</span>
-    </div>
-  </header>
-
-  <!-- ===== SUBJECT CARDS ===== -->
-  <section id="subjects" class="subjects">
-    <div class="section-header">
-      <h2>Choose a Subject</h2>
-      <p>Three worlds of discovery</p>
-    </div>
-
-    <div class="cards">
-
-      <a href="#featured" class="card math">
-        <div class="card-icon">📐</div>
-        <h3>Mathematics</h3>
-        <p>General & Higher Math — from fractions to functions</p>
-        <span class="card-count">8 simulations</span>
-      </a>
-
-      <a href="#featured" class="card physics">
-        <div class="card-icon">⚛️</div>
-        <h3>Physics</h3>
-        <p>Motion, Forces, Energy & Waves</p>
-        <span class="card-count">12 simulations</span>
-      </a>
-
-      <a href="#featured" class="card chemistry">
-        <div class="card-icon">🧪</div>
-        <h3>Chemistry</h3>
-        <p>Atoms, Bonds, Reactions & States</p>
-        <span class="card-count">10 simulations</span>
-      </a>
-
+    <div class="hero-bg" aria-hidden="true">
+      <span>π</span><span>⚛</span><span>∑</span>
+      <span>∫</span><span>⚗</span><span>∞</span>
     </div>
   </section>
 
-  <!-- ===== FEATURED SIMS ===== -->
-  <section id="featured" class="featured">
-    <div class="section-header">
-      <h2>Featured Simulations</h2>
-      <p>Try them right here — no installation needed</p>
-    </div>
-
-    <div class="sim-grid">
-
-      <!-- SIM 1 -->
-      <div class="sim-card">
-        <div class="sim-preview">
-          <iframe
-            src="https://phet.colorado.edu/sims/html/projectile-motion/latest/projectile-motion_en.html"
-            allowfullscreen loading="lazy">
-          </iframe>
-        </div>
-        <div class="sim-info">
-          <h3>Projectile Motion</h3>
-          <span class="tag physics">Physics</span>
-          <p>Launch objects and see how gravity, angle, and speed affect the path.</p>
-          <button class="btn-play" onclick="openSim('https://phet.colorado.edu/sims/html/projectile-motion/latest/projectile-motion_en.html')">
-            ▶ Launch Simulation
-          </button>
-        </div>
+  <!-- ============================================================
+       SCREEN 2: SUBJECTS
+  ============================================================= -->
+  <section id="subjects" class="screen">
+    <div class="screen-inner">
+      <div class="section-header">
+        <h2>Choose a Subject</h2>
+        <p>Three worlds of discovery</p>
       </div>
 
-      <!-- SIM 2 -->
-      <div class="sim-card">
-        <div class="sim-preview">
-          <iframe
-            src="https://phet.colorado.edu/sims/html/pendulum-lab/latest/pendulum-lab_en.html"
-            allowfullscreen loading="lazy">
-          </iframe>
-        </div>
-        <div class="sim-info">
-          <h3>Pendulum Lab</h3>
-          <span class="tag physics">Physics</span>
-          <p>Discover how length, mass, and gravity affect a pendulum's swing.</p>
-          <button class="btn-play" onclick="openSim('https://phet.colorado.edu/sims/html/pendulum-lab/latest/pendulum-lab_en.html')">
-            ▶ Launch Simulation
-          </button>
-        </div>
-      </div>
+      <div class="cards">
+        <button class="card math" onclick="showScreen('math')">
+          <div class="card-icon">∫</div>
+          <h3>Mathematics</h3>
+          <p>General & Higher Math — from fractions to functions</p>
+          <span class="card-count">2 simulations</span>
+        </button>
 
-      <!-- SIM 3 -->
-      <div class="sim-card">
-        <div class="sim-preview">
-          <iframe
-            src="https://phet.colorado.edu/sims/html/build-a-molecule/latest/build-a-molecule_en.html"
-            allowfullscreen loading="lazy">
-          </iframe>
-        </div>
-        <div class="sim-info">
-          <h3>Build a Molecule</h3>
-          <span class="tag chemistry">Chemistry</span>
-          <p>Combine atoms to create molecules and learn chemical bonding.</p>
-          <button class="btn-play" onclick="openSim('https://phet.colorado.edu/sims/html/build-a-molecule/latest/build-a-molecule_en.html')">
-            ▶ Launch Simulation
-          </button>
-        </div>
-      </div>
+        <button class="card physics" onclick="showScreen('physics')">
+          <div class="card-icon">⚛️</div>
+          <h3>Physics</h3>
+          <p>Motion, Forces, Energy & Waves</p>
+          <span class="card-count">3 simulations</span>
+        </button>
 
-      <!-- SIM 4 -->
-      <div class="sim-card">
-        <div class="sim-preview">
-          <iframe
-            src="https://phet.colorado.edu/sims/html/fractions-intro/latest/fractions-intro_en.html"
-            allowfullscreen loading="lazy">
-          </iframe>
-        </div>
-        <div class="sim-info">
-          <h3>Fractions Intro</h3>
-          <span class="tag math">Math</span>
-          <p>Visualize fractions with shapes, number lines, and interactive games.</p>
-          <button class="btn-play" onclick="openSim('https://phet.colorado.edu/sims/html/fractions-intro/latest/fractions-intro_en.html')">
-            ▶ Launch Simulation
-          </button>
-        </div>
+        <button class="card chemistry" onclick="showScreen('chemistry')">
+          <div class="card-icon">🧪</div>
+          <h3>Chemistry</h3>
+          <p>Atoms, Bonds, Reactions & States</p>
+          <span class="card-count">2 simulations</span>
+        </button>
       </div>
-
-      <!-- SIM 5 -->
-      <div class="sim-card">
-        <div class="sim-preview">
-          <iframe
-            src="https://phet.colorado.edu/sims/html/gravity-and-orbits/latest/gravity-and-orbits_en.html"
-            allowfullscreen loading="lazy">
-          </iframe>
-        </div>
-        <div class="sim-info">
-          <h3>Gravity & Orbits</h3>
-          <span class="tag physics">Physics</span>
-          <p>Move the sun, earth, and moon to see how gravity shapes orbits.</p>
-          <button class="btn-play" onclick="openSim('https://phet.colorado.edu/sims/html/gravity-and-orbits/latest/gravity-and-orbits_en.html')">
-            ▶ Launch Simulation
-          </button>
-        </div>
-      </div>
-
-      <!-- SIM 6 -->
-      <div class="sim-card">
-        <div class="sim-preview">
-          <iframe
-            src="https://phet.colorado.edu/sims/html/balancing-chemical-equations/latest/balancing-chemical-equations_en.html"
-            allowfullscreen loading="lazy">
-          </iframe>
-        </div>
-        <div class="sim-info">
-          <h3>Balancing Equations</h3>
-          <span class="tag chemistry">Chemistry</span>
-          <p>Balance chemical equations like a pro with interactive tools.</p>
-          <button class="btn-play" onclick="openSim('https://phet.colorado.edu/sims/html/balancing-chemical-equations/latest/balancing-chemical-equations_en.html')">
-            ▶ Launch Simulation
-          </button>
-        </div>
-      </div>
-
     </div>
   </section>
 
-  <!-- ===== ABOUT ===== -->
-  <section id="about" class="about">
-    <div class="about-inner">
-      <h2>About Scientia</h2>
-      <p>
+  <!-- ============================================================
+       SCREEN 3: MATH
+  ============================================================= -->
+  <section id="math" class="screen">
+    <div class="screen-inner">
+      <button class="back-btn" onclick="showScreen('subjects')">← Back to Subjects</button>
+      <div class="section-header">
+        <h2><span class="header-icon">∫</span> Mathematics Simulations</h2>
+        <p>Visualize math like never before</p>
+      </div>
+
+      <div class="sim-grid">
+        <div class="sim-card">
+          <div class="sim-header">
+            <span class="sim-brand">
+              <span class="sim-logo">∑</span>
+              <span class="sim-brand-text">Scientia</span>
+            </span>
+            <span class="sim-tag math">Math</span>
+          </div>
+          <div class="sim-preview">
+            <iframe data-src="https://phet.colorado.edu/sims/html/fractions-intro/latest/fractions-intro_en.html" allowfullscreen title="Fractions Intro"></iframe>
+          </div>
+          <div class="sim-info">
+            <h3>Fractions Intro</h3>
+            <p>Visualize fractions with shapes, number lines, and interactive games.</p>
+            <button class="btn-play" onclick="openSim('https://phet.colorado.edu/sims/html/fractions-intro/latest/fractions-intro_en.html')">▶ Launch on Scientia</button>
+            <span class="sim-credit">Powered by PhET · University of Colorado Boulder</span>
+          </div>
+        </div>
+
+        <div class="sim-card">
+          <div class="sim-header">
+            <span class="sim-brand">
+              <span class="sim-logo">∑</span>
+              <span class="sim-brand-text">Scientia</span>
+            </span>
+            <span class="sim-tag math">Math</span>
+          </div>
+          <div class="sim-preview">
+            <iframe data-src="https://phet.colorado.edu/sims/html/graphing-lines/latest/graphing-lines_en.html" allowfullscreen title="Graphing Lines"></iframe>
+          </div>
+          <div class="sim-info">
+            <h3>Graphing Lines</h3>
+            <p>Explore slope-intercept form and graph linear equations.</p>
+            <button class="btn-play" onclick="openSim('https://phet.colorado.edu/sims/html/graphing-lines/latest/graphing-lines_en.html')">▶ Launch on Scientia</button>
+            <span class="sim-credit">Powered by PhET · University of Colorado Boulder</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SCREEN 4: PHYSICS
+  ============================================================= -->
+  <section id="physics" class="screen">
+    <div class="screen-inner">
+      <button class="back-btn" onclick="showScreen('subjects')">← Back to Subjects</button>
+      <div class="section-header">
+        <h2>⚛️ Physics Simulations</h2>
+        <p>Play with the laws of the universe</p>
+      </div>
+
+      <div class="sim-grid">
+        <div class="sim-card">
+          <div class="sim-header">
+            <span class="sim-brand">
+              <span class="sim-logo">∑</span>
+              <span class="sim-brand-text">Scientia</span>
+            </span>
+            <span class="sim-tag physics">Physics</span>
+          </div>
+          <div class="sim-preview">
+            <iframe data-src="https://phet.colorado.edu/sims/html/projectile-motion/latest/projectile-motion_en.html" allowfullscreen title="Projectile Motion"></iframe>
+          </div>
+          <div class="sim-info">
+            <h3>Projectile Motion</h3>
+            <p>Launch objects and see how gravity, angle, and speed affect the path.</p>
+            <button class="btn-play" onclick="openSim('https://phet.colorado.edu/sims/html/projectile-motion/latest/projectile-motion_en.html')">▶ Launch on Scientia</button>
+            <span class="sim-credit">Powered by PhET · University of Colorado Boulder</span>
+          </div>
+        </div>
+
+        <div class="sim-card">
+          <div class="sim-header">
+            <span class="sim-brand">
+              <span class="sim-logo">∑</span>
+              <span class="sim-brand-text">Scientia</span>
+            </span>
+            <span class="sim-tag physics">Physics</span>
+          </div>
+          <div class="sim-preview">
+            <iframe data-src="https://phet.colorado.edu/sims/html/pendulum-lab/latest/pendulum-lab_en.html" allowfullscreen title="Pendulum Lab"></iframe>
+          </div>
+          <div class="sim-info">
+            <h3>Pendulum Lab</h3>
+            <p>Discover how length, mass, and gravity affect a pendulum's swing.</p>
+            <button class="btn-play" onclick="openSim('https://phet.colorado.edu/sims/html/pendulum-lab/latest/pendulum-lab_en.html')">▶ Launch on Scientia</button>
+            <span class="sim-credit">Powered by PhET · University of Colorado Boulder</span>
+          </div>
+        </div>
+
+        <div class="sim-card">
+          <div class="sim-header">
+            <span class="sim-brand">
+              <span class="sim-logo">∑</span>
+              <span class="sim-brand-text">Scientia</span>
+            </span>
+            <span class="sim-tag physics">Physics</span>
+          </div>
+          <div class="sim-preview">
+            <iframe data-src="https://phet.colorado.edu/sims/html/gravity-and-orbits/latest/gravity-and-orbits_en.html" allowfullscreen title="Gravity and Orbits"></iframe>
+          </div>
+          <div class="sim-info">
+            <h3>Gravity & Orbits</h3>
+            <p>Move the sun, earth, and moon to see how gravity shapes orbits.</p>
+            <button class="btn-play" onclick="openSim('https://phet.colorado.edu/sims/html/gravity-and-orbits/latest/gravity-and-orbits_en.html')">▶ Launch on Scientia</button>
+            <span class="sim-credit">Powered by PhET · University of Colorado Boulder</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SCREEN 5: CHEMISTRY
+  ============================================================= -->
+  <section id="chemistry" class="screen">
+    <div class="screen-inner">
+      <button class="back-btn" onclick="showScreen('subjects')">← Back to Subjects</button>
+      <div class="section-header">
+        <h2>🧪 Chemistry Simulations</h2>
+        <p>See chemistry in action</p>
+      </div>
+
+      <div class="sim-grid">
+        <div class="sim-card">
+          <div class="sim-header">
+            <span class="sim-brand">
+              <span class="sim-logo">∑</span>
+              <span class="sim-brand-text">Scientia</span>
+            </span>
+            <span class="sim-tag chemistry">Chemistry</span>
+          </div>
+          <div class="sim-preview">
+            <iframe data-src="https://phet.colorado.edu/sims/html/build-a-molecule/latest/build-a-molecule_en.html" allowfullscreen title="Build a Molecule"></iframe>
+          </div>
+          <div class="sim-info">
+            <h3>Build a Molecule</h3>
+            <p>Combine atoms to create molecules and learn chemical bonding.</p>
+            <button class="btn-play" onclick="openSim('https://phet.colorado.edu/sims/html/build-a-molecule/latest/build-a-molecule_en.html')">▶ Launch on Scientia</button>
+            <span class="sim-credit">Powered by PhET · University of Colorado Boulder</span>
+          </div>
+        </div>
+
+        <div class="sim-card">
+          <div class="sim-header">
+            <span class="sim-brand">
+              <span class="sim-logo">∑</span>
+              <span class="sim-brand-text">Scientia</span>
+            </span>
+            <span class="sim-tag chemistry">Chemistry</span>
+          </div>
+          <div class="sim-preview">
+            <iframe data-src="https://phet.colorado.edu/sims/html/balancing-chemical-equations/latest/balancing-chemical-equations_en.html" allowfullscreen title="Balancing Chemical Equations"></iframe>
+          </div>
+          <div class="sim-info">
+            <h3>Balancing Equations</h3>
+            <p>Balance chemical equations like a pro with interactive tools.</p>
+            <button class="btn-play" onclick="openSim('https://phet.colorado.edu/sims/html/balancing-chemical-equations/latest/balancing-chemical-equations_en.html')">▶ Launch on Scientia</button>
+            <span class="sim-credit">Powered by PhET · University of Colorado Boulder</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SCREEN 6: ABOUT
+  ============================================================= -->
+  <section id="about" class="screen">
+    <div class="screen-inner">
+      <button class="back-btn" onclick="showScreen('home')">← Back Home</button>
+      <div class="section-header">
+        <h2>About Scientia</h2>
+      </div>
+      <p class="about-text">
         <strong>Scientia</strong> (Latin for "knowledge") brings world-class interactive
-        simulations into a clean, distraction-free space. Whether you're a student,
-        teacher, or lifelong learner — explore, experiment, and discover.
+        simulations into a clean, distraction-free space. Simulations powered by
+        <a href="https://phet.colorado.edu" target="_blank" rel="noopener">PhET Interactive Simulations</a>,
+        University of Colorado Boulder.
       </p>
     </div>
   </section>
@@ -210,32 +274,138 @@
   <!-- ===== FOOTER ===== -->
   <footer>
     <div class="footer-logo">∑ Scientia</div>
-    <p>© 2026 Scientia · Simulations by <a href="https://phet.colorado.edu" target="_blank">PhET Interactive Simulations</a>, University of Colorado Boulder</p>
+    <p>© 2026 Scientia · Powered by <a href="https://phet.colorado.edu" target="_blank" rel="noopener">PhET</a></p>
   </footer>
 
   <!-- ===== FULLSCREEN MODAL ===== -->
-  <div id="simModal" class="modal">
+  <div id="simModal" class="modal" role="dialog" aria-modal="true">
     <div class="modal-content">
-      <button class="modal-close" onclick="closeSim()">✕</button>
-      <iframe id="modalFrame" src="" allowfullscreen></iframe>
+      <div class="modal-header">
+        <span class="sim-brand">
+          <span class="sim-logo">∑</span>
+          <span class="sim-brand-text">Scientia</span>
+        </span>
+        <button class="modal-close" onclick="closeSim()" aria-label="Close">✕</button>
+      </div>
+      <iframe id="modalFrame" src="" allowfullscreen title="Simulation"></iframe>
     </div>
   </div>
 
   <script>
-    function openSim(url) {
-      document.getElementById('modalFrame').src = url;
-      document.getElementById('simModal').classList.add('active');
-      document.body.style.overflow = 'hidden';
+  /* ============================================================
+     SCIENTIA — PERFORMANCE-OPTIMIZED JAVASCRIPT
+  ============================================================ */
+
+  const screens = document.querySelectorAll('.screen');
+  const validScreens = ['home', 'subjects', 'math', 'physics', 'chemistry', 'about'];
+
+  /* ---------- Screen Router ---------- */
+  function showScreen(id) {
+    if (!validScreens.includes(id)) id = 'home';
+
+    screens.forEach(s => s.classList.remove('active'));
+    const target = document.getElementById(id);
+    if (target) target.classList.add('active');
+
+    loadSimsFor(id);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+
+    if (location.hash !== '#' + id) {
+      history.pushState({ screen: id }, '', '#' + id);
     }
-    function closeSim() {
-      document.getElementById('modalFrame').src = '';
-      document.getElementById('simModal').classList.remove('active');
-      document.body.style.overflow = 'auto';
-    }
-    document.addEventListener('keydown', e => {
-      if (e.key === 'Escape') closeSim();
+
+    const titles = {
+      home: 'Scientia — Learn by Math, Physics & Chemistry',
+      subjects: 'Subjects · Scientia',
+      math: 'Mathematics · Scientia',
+      physics: 'Physics · Scientia',
+      chemistry: 'Chemistry · Scientia',
+      about: 'About · Scientia'
+    };
+    document.title = titles[id] || titles.home;
+  }
+
+  /* ---------- Lazy-load iframes ---------- */
+  const simObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const iframe = entry.target;
+        const src = iframe.dataset.src;
+        if (src && !iframe.src) iframe.src = src;
+        simObserver.unobserve(iframe);
+      }
     });
+  }, { rootMargin: '200px' });
+
+  function loadSimsFor(screenId) {
+    const screen = document.getElementById(screenId);
+    if (!screen) return;
+    screen.querySelectorAll('iframe[data-src]').forEach(iframe => {
+      simObserver.observe(iframe);
+    });
+  }
+
+  /* ---------- Fullscreen Modal ---------- */
+  function openSim(url) {
+    const modal = document.getElementById('simModal');
+    const frame = document.getElementById('modalFrame');
+    frame.src = url;
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeSim() {
+    const modal = document.getElementById('simModal');
+    const frame = document.getElementById('modalFrame');
+    frame.src = '';
+    modal.classList.remove('active');
+    document.body.style.overflow = 'auto';
+  }
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') closeSim();
+  });
+
+  /* ---------- Browser Back / Forward ---------- */
+  window.addEventListener('popstate', (e) => {
+    const id = (e.state && e.state.screen) || location.hash.replace('#', '') || 'home';
+    showScreen(id);
+  });
+
+  /* ---------- First Load ---------- */
+  document.addEventListener('DOMContentLoaded', () => {
+    const initial = location.hash.replace('#', '') || 'home';
+    showScreen(initial);
+  });
+
+  /* ---------- Keyboard shortcuts ---------- */
+  document.addEventListener('keydown', e => {
+    if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+    if (e.key === '1') showScreen('math');
+    if (e.key === '2') showScreen('physics');
+    if (e.key === '3') showScreen('chemistry');
+    if (e.key === 'h' || e.key === 'H') showScreen('home');
+    if (e.key === 's' || e.key === 'S') showScreen('subjects');
+  });
+
+  /* ---------- Pause off-screen iframes (save battery) ---------- */
+  const pauseObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      const iframe = entry.target;
+      if (!iframe.src) return;
+      iframe.style.visibility = entry.isIntersecting ? 'visible' : 'hidden';
+    });
+  }, { rootMargin: '100px' });
+
+  document.querySelectorAll('.sim-preview iframe').forEach(iframe => {
+    pauseObserver.observe(iframe);
+  });
+
+  /* ---------- Reduced-motion support ---------- */
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    document.body.classList.add('reduce-motion');
+  }
   </script>
 
 </body>
-</html>
+	</html>
