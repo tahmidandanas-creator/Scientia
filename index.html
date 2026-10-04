@@ -59,25 +59,25 @@
           <div class="card-icon">∫</div>
           <h3>Mathematics</h3>
           <p>General & Higher Math — from fractions to calculus</p>
-          <span class="card-count">7 simulations</span>
+          <span class="card-count">9 simulations</span>
         </button>
         <button class="card physics" onclick="showScreen('physics')">
           <div class="card-icon">⚛️</div>
           <h3>Physics</h3>
           <p>Motion, Forces, Energy & Waves</p>
-          <span class="card-count">7 simulations</span>
+          <span class="card-count">9 simulations</span>
         </button>
         <button class="card chemistry" onclick="showScreen('chemistry')">
           <div class="card-icon">🧪</div>
           <h3>Chemistry</h3>
           <p>Atoms, Bonds, Reactions & States</p>
-          <span class="card-count">7 simulations</span>
+          <span class="card-count">9 simulations</span>
         </button>
       </div>
     </div>
   </section>
 
-  <!-- ===== SCREEN 3: MATH (7 sims) ===== -->
+  <!-- ===== SCREEN 3: MATH (9 sims) ===== -->
   <section id="math" class="screen">
     <div class="screen-inner">
       <button class="back-btn" onclick="showScreen('subjects')">← Back to Subjects</button>
@@ -184,7 +184,6 @@
           </div>
         </div>
 
-        <!-- MATH 7: CALCULUS GRAPHER -->
         <div class="sim-card">
           <div class="sim-header">
             <span class="sim-brand"><span class="sim-logo">∑</span><span class="sim-brand-text">Scientia</span></span>
@@ -201,11 +200,43 @@
           </div>
         </div>
 
+        <div class="sim-card">
+          <div class="sim-header">
+            <span class="sim-brand"><span class="sim-logo">∑</span><span class="sim-brand-text">Scientia</span></span>
+            <span class="sim-tag math">Math</span>
+          </div>
+          <div class="sim-preview">
+            <iframe data-src="https://phet.colorado.edu/sims/html/curve-fitting/latest/curve-fitting_en.html" allowfullscreen title="Curve Fitting"></iframe>
+          </div>
+          <div class="sim-info">
+            <h3>Curve Fitting</h3>
+            <p>Adjust a curve to match data points and see how changes affect the fit.</p>
+            <button class="btn-play" onclick="openSim('https://phet.colorado.edu/sims/html/curve-fitting/latest/curve-fitting_en.html')">▶ Launch on Scientia</button>
+            <span class="sim-credit">Powered by PhET · University of Colorado Boulder</span>
+          </div>
+        </div>
+
+        <div class="sim-card">
+          <div class="sim-header">
+            <span class="sim-brand"><span class="sim-logo">∑</span><span class="sim-brand-text">Scientia</span></span>
+            <span class="sim-tag math">Math</span>
+          </div>
+          <div class="sim-preview">
+            <iframe data-src="https://phet.colorado.edu/sims/html/vector-addition/latest/vector-addition_en.html" allowfullscreen title="Vector Addition"></iframe>
+          </div>
+          <div class="sim-info">
+            <h3>Vector Addition</h3>
+            <p>Explore vectors in 1D or 2D and discover how vectors add together.</p>
+            <button class="btn-play" onclick="openSim('https://phet.colorado.edu/sims/html/vector-addition/latest/vector-addition_en.html')">▶ Launch on Scientia</button>
+            <span class="sim-credit">Powered by PhET · University of Colorado Boulder</span>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
 
-  <!-- ===== SCREEN 4: PHYSICS (7 sims) ===== -->
+  <!-- ===== SCREEN 4: PHYSICS (9 sims) ===== -->
   <section id="physics" class="screen">
     <div class="screen-inner">
       <button class="back-btn" onclick="showScreen('subjects')">← Back to Subjects</button>
@@ -313,11 +344,39 @@
           </div>
         </div>
 
+        <div class="sim-card">
+          <div class="sim-header">
+            <span class="sim-brand"><span class="sim-logo">∑</span><span class="sim-brand-text">Scientia</span></span>
+            <span class="sim-tag physics">Physics</span>
+          </div>
+          <div class="sim-preview"><iframe data-src="https://phet.colorado.edu/sims/html/hookes-law/latest/hookes-law_en.html" allowfullscreen title="Hooke's Law"></iframe></div>
+          <div class="sim-info">
+            <h3>Hooke's Law</h3>
+            <p>Explore the relationship between force and spring stretch.</p>
+            <button class="btn-play" onclick="openSim('https://phet.colorado.edu/sims/html/hookes-law/latest/hookes-law_en.html')">▶ Launch on Scientia</button>
+            <span class="sim-credit">Powered by PhET · University of Colorado Boulder</span>
+          </div>
+        </div>
+
+        <div class="sim-card">
+          <div class="sim-header">
+            <span class="sim-brand"><span class="sim-logo">∑</span><span class="sim-brand-text">Scientia</span></span>
+            <span class="sim-tag physics">Physics</span>
+          </div>
+          <div class="sim-preview"><iframe data-src="https://phet.colorado.edu/sims/html/faradays-electromagnetic-lab/latest/faradays-electromagnetic-lab_en.html" allowfullscreen title="Faraday's Electromagnetic Lab"></iframe></div>
+          <div class="sim-info">
+            <h3>Faraday's Lab</h3>
+            <p>Investigate electromagnetic induction with a bar magnet and coil.</p>
+            <button class="btn-play" onclick="openSim('https://phet.colorado.edu/sims/html/faradays-electromagnetic-lab/latest/faradays-electromagnetic-lab_en.html')">▶ Launch on Scientia</button>
+            <span class="sim-credit">Powered by PhET · University of Colorado Boulder</span>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
 
-  <!-- ===== SCREEN 5: CHEMISTRY (7 sims) ===== -->
+  <!-- ===== SCREEN 5: CHEMISTRY (9 sims) ===== -->
   <section id="chemistry" class="screen">
     <div class="screen-inner">
       <button class="back-btn" onclick="showScreen('subjects')">← Back to Subjects</button>
@@ -421,6 +480,34 @@
             <h3>Concentration</h3>
             <p>Explore molarity by adding solute, water, and draining the solution.</p>
             <button class="btn-play" onclick="openSim('https://phet.colorado.edu/sims/html/concentration/latest/concentration_en.html')">▶ Launch on Scientia</button>
+            <span class="sim-credit">Powered by PhET · University of Colorado Boulder</span>
+          </div>
+        </div>
+
+        <div class="sim-card">
+          <div class="sim-header">
+            <span class="sim-brand"><span class="sim-logo">∑</span><span class="sim-brand-text">Scientia</span></span>
+            <span class="sim-tag chemistry">Chemistry</span>
+          </div>
+          <div class="sim-preview"><iframe data-src="https://phet.colorado.edu/sims/html/molecule-polarity/latest/molecule-polarity_en.html" allowfullscreen title="Molecule Polarity"></iframe></div>
+          <div class="sim-info">
+            <h3>Molecule Polarity</h3>
+            <p>See how changing atoms affects the polarity of a molecule.</p>
+            <button class="btn-play" onclick="openSim('https://phet.colorado.edu/sims/html/molecule-polarity/latest/molecule-polarity_en.html')">▶ Launch on Scientia</button>
+            <span class="sim-credit">Powered by PhET · University of Colorado Boulder</span>
+          </div>
+        </div>
+
+        <div class="sim-card">
+          <div class="sim-header">
+            <span class="sim-brand"><span class="sim-logo">∑</span><span class="sim-brand-text">Scientia</span></span>
+            <span class="sim-tag chemistry">Chemistry</span>
+          </div>
+          <div class="sim-preview"><iframe data-src="https://phet.colorado.edu/sims/html/acid-base-solutions/latest/acid-base-solutions_en.html" allowfullscreen title="Acid-Base Solutions"></iframe></div>
+          <div class="sim-info">
+            <h3>Acid-Base Solutions</h3>
+            <p>Test the pH of common solutions and see the ions in action.</p>
+            <button class="btn-play" onclick="openSim('https://phet.colorado.edu/sims/html/acid-base-solutions/latest/acid-base-solutions_en.html')">▶ Launch on Scientia</button>
             <span class="sim-credit">Powered by PhET · University of Colorado Boulder</span>
           </div>
         </div>
@@ -561,4 +648,4 @@
   </script>
 
 </body>
-              </html>
+  </html>
