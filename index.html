@@ -8,7 +8,6 @@
   <meta name="description" content="Scientia: Interactive 2D simulations and games for Math, Physics, and Chemistry. Free for everyone.">
   <meta name="theme-color" content="#0b1220">
 
-  <!-- PWA -->
   <link rel="manifest" href="manifest.json">
   <link rel="apple-touch-icon" href="icons/icon-192.png">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -30,17 +29,11 @@
       <li><a href="#home" onclick="showScreen('home'); return false;">Home</a></li>
       <li><a href="#subjects" onclick="showScreen('subjects'); return false;">Subjects</a></li>
       <li><a href="#about" onclick="showScreen('about'); return false;">About</a></li>
-      <li>
-        <button id="installBtn" class="install-btn" onclick="installScientia()" style="display:none;">
-          ⬇ Install
-        </button>
-      </li>
+      <li><button id="installBtn" class="install-btn" onclick="installScientia()" style="display:none;">⬇ Install</button></li>
     </ul>
   </nav>
 
-  <!-- ============================================================
-       SCREEN 1: HOME
-  ============================================================= -->
+  <!-- ===== SCREEN 1: HOME ===== -->
   <section id="home" class="screen active">
     <div class="hero-content">
       <div class="hero-badge">✨ Free · No install · Works in your browser</div>
@@ -54,44 +47,37 @@
     </div>
   </section>
 
-  <!-- ============================================================
-       SCREEN 2: SUBJECTS
-  ============================================================= -->
+  <!-- ===== SCREEN 2: SUBJECTS ===== -->
   <section id="subjects" class="screen">
     <div class="screen-inner">
       <div class="section-header">
         <h2>Choose a Subject</h2>
         <p>Three worlds of discovery</p>
       </div>
-
       <div class="cards">
         <button class="card math" onclick="showScreen('math')">
           <div class="card-icon">∫</div>
           <h3>Mathematics</h3>
-          <p>General & Higher Math — from fractions to functions</p>
-          <span class="card-count">4 simulations</span>
+          <p>General & Higher Math — from fractions to calculus</p>
+          <span class="card-count">6 simulations</span>
         </button>
-
         <button class="card physics" onclick="showScreen('physics')">
           <div class="card-icon">⚛️</div>
           <h3>Physics</h3>
-          <p>Motion, Forces, Energy & Waves</p>
-          <span class="card-count">4 simulations</span>
+          <p>Motion, Forces, Energy & Electromagnetism</p>
+          <span class="card-count">6 simulations</span>
         </button>
-
         <button class="card chemistry" onclick="showScreen('chemistry')">
           <div class="card-icon">🧪</div>
           <h3>Chemistry</h3>
           <p>Atoms, Bonds, Reactions & States</p>
-          <span class="card-count">4 simulations</span>
+          <span class="card-count">6 simulations</span>
         </button>
       </div>
     </div>
   </section>
 
-  <!-- ============================================================
-       SCREEN 3: MATH (4 sims)
-  ============================================================= -->
+  <!-- ===== SCREEN 3: MATH (6 sims) ===== -->
   <section id="math" class="screen">
     <div class="screen-inner">
       <button class="back-btn" onclick="showScreen('subjects')">← Back to Subjects</button>
@@ -102,13 +88,9 @@
 
       <div class="sim-grid">
 
-        <!-- MATH 1 -->
         <div class="sim-card">
           <div class="sim-header">
-            <span class="sim-brand">
-              <span class="sim-logo">∑</span>
-              <span class="sim-brand-text">Scientia</span>
-            </span>
+            <span class="sim-brand"><span class="sim-logo">∑</span><span class="sim-brand-text">Scientia</span></span>
             <span class="sim-tag math">Math</span>
           </div>
           <div class="sim-preview">
@@ -122,13 +104,9 @@
           </div>
         </div>
 
-        <!-- MATH 2 -->
         <div class="sim-card">
           <div class="sim-header">
-            <span class="sim-brand">
-              <span class="sim-logo">∑</span>
-              <span class="sim-brand-text">Scientia</span>
-            </span>
+            <span class="sim-brand"><span class="sim-logo">∑</span><span class="sim-brand-text">Scientia</span></span>
             <span class="sim-tag math">Math</span>
           </div>
           <div class="sim-preview">
@@ -142,13 +120,9 @@
           </div>
         </div>
 
-        <!-- MATH 3 -->
         <div class="sim-card">
           <div class="sim-header">
-            <span class="sim-brand">
-              <span class="sim-logo">∑</span>
-              <span class="sim-brand-text">Scientia</span>
-            </span>
+            <span class="sim-brand"><span class="sim-logo">∑</span><span class="sim-brand-text">Scientia</span></span>
             <span class="sim-tag math">Math</span>
           </div>
           <div class="sim-preview">
@@ -162,13 +136,9 @@
           </div>
         </div>
 
-        <!-- MATH 4 -->
         <div class="sim-card">
           <div class="sim-header">
-            <span class="sim-brand">
-              <span class="sim-logo">∑</span>
-              <span class="sim-brand-text">Scientia</span>
-            </span>
+            <span class="sim-brand"><span class="sim-logo">∑</span><span class="sim-brand-text">Scientia</span></span>
             <span class="sim-tag math">Math</span>
           </div>
           <div class="sim-preview">
@@ -182,13 +152,44 @@
           </div>
         </div>
 
+        <div class="sim-card">
+          <div class="sim-header">
+            <span class="sim-brand"><span class="sim-logo">∑</span><span class="sim-brand-text">Scientia</span></span>
+            <span class="sim-tag math">Math</span>
+          </div>
+          <div class="sim-preview">
+            <iframe data-src="https://phet.colorado.edu/sims/html/trig-tour/latest/trig-tour_en.html" allowfullscreen title="Trig Tour"></iframe>
+          </div>
+          <div class="sim-info">
+            <h3>Trig Tour</h3>
+            <p>Explore sine, cosine, and tangent on the unit circle.</p>
+            <button class="btn-play" onclick="openSim('https://phet.colorado.edu/sims/html/trig-tour/latest/trig-tour_en.html')">▶ Launch on Scientia</button>
+            <span class="sim-credit">Powered by PhET · University of Colorado Boulder</span>
+          </div>
+        </div>
+
+        <!-- MATH 6: CALCULUS GAME -->
+        <div class="sim-card calc-card">
+          <div class="sim-header">
+            <span class="sim-brand"><span class="sim-logo">∑</span><span class="sim-brand-text">Scientia</span></span>
+            <span class="sim-tag math">Math · Original</span>
+          </div>
+          <div class="sim-preview calc-preview">
+            <canvas id="calcPreview" width="400" height="250"></canvas>
+          </div>
+          <div class="sim-info">
+            <h3>Calculus Game ∫</h3>
+            <p>Two modes: <strong>Differentiation</strong> & <strong>Integration</strong>. Solve fast, build streaks.</p>
+            <button class="btn-play" onclick="openCalcGame()">▶ Play Calculus Game</button>
+            <span class="sim-credit">⭐ Built by Scientia · 100% original</span>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
 
-  <!-- ============================================================
-       SCREEN 4: PHYSICS (4 sims)
-  ============================================================= -->
+  <!-- ===== SCREEN 4: PHYSICS (6 sims) ===== -->
   <section id="physics" class="screen">
     <div class="screen-inner">
       <button class="back-btn" onclick="showScreen('subjects')">← Back to Subjects</button>
@@ -196,21 +197,14 @@
         <h2>⚛️ Physics Simulations</h2>
         <p>Play with the laws of the universe</p>
       </div>
-
       <div class="sim-grid">
 
-        <!-- PHYSICS 1 -->
         <div class="sim-card">
           <div class="sim-header">
-            <span class="sim-brand">
-              <span class="sim-logo">∑</span>
-              <span class="sim-brand-text">Scientia</span>
-            </span>
+            <span class="sim-brand"><span class="sim-logo">∑</span><span class="sim-brand-text">Scientia</span></span>
             <span class="sim-tag physics">Physics</span>
           </div>
-          <div class="sim-preview">
-            <iframe data-src="https://phet.colorado.edu/sims/html/projectile-motion/latest/projectile-motion_en.html" allowfullscreen title="Projectile Motion"></iframe>
-          </div>
+          <div class="sim-preview"><iframe data-src="https://phet.colorado.edu/sims/html/projectile-motion/latest/projectile-motion_en.html" allowfullscreen title="Projectile Motion"></iframe></div>
           <div class="sim-info">
             <h3>Projectile Motion</h3>
             <p>Launch objects and see how gravity, angle, and speed affect the path.</p>
@@ -219,18 +213,12 @@
           </div>
         </div>
 
-        <!-- PHYSICS 2 -->
         <div class="sim-card">
           <div class="sim-header">
-            <span class="sim-brand">
-              <span class="sim-logo">∑</span>
-              <span class="sim-brand-text">Scientia</span>
-            </span>
+            <span class="sim-brand"><span class="sim-logo">∑</span><span class="sim-brand-text">Scientia</span></span>
             <span class="sim-tag physics">Physics</span>
           </div>
-          <div class="sim-preview">
-            <iframe data-src="https://phet.colorado.edu/sims/html/energy-skate-park/latest/energy-skate-park_en.html" allowfullscreen title="Energy Skate Park"></iframe>
-          </div>
+          <div class="sim-preview"><iframe data-src="https://phet.colorado.edu/sims/html/energy-skate-park/latest/energy-skate-park_en.html" allowfullscreen title="Energy Skate Park"></iframe></div>
           <div class="sim-info">
             <h3>Energy Skate Park</h3>
             <p>Explore conservation of energy as a skater moves along tracks.</p>
@@ -239,18 +227,12 @@
           </div>
         </div>
 
-        <!-- PHYSICS 3 -->
         <div class="sim-card">
           <div class="sim-header">
-            <span class="sim-brand">
-              <span class="sim-logo">∑</span>
-              <span class="sim-brand-text">Scientia</span>
-            </span>
+            <span class="sim-brand"><span class="sim-logo">∑</span><span class="sim-brand-text">Scientia</span></span>
             <span class="sim-tag physics">Physics</span>
           </div>
-          <div class="sim-preview">
-            <iframe data-src="https://phet.colorado.edu/sims/html/circuit-construction-kit-dc/latest/circuit-construction-kit-dc_en.html" allowfullscreen title="Circuit Construction Kit"></iframe>
-          </div>
+          <div class="sim-preview"><iframe data-src="https://phet.colorado.edu/sims/html/circuit-construction-kit-dc/latest/circuit-construction-kit-dc_en.html" allowfullscreen title="Circuit Construction Kit"></iframe></div>
           <div class="sim-info">
             <h3>Circuit Construction Kit</h3>
             <p>Build circuits with batteries, resistors, and light bulbs.</p>
@@ -259,18 +241,12 @@
           </div>
         </div>
 
-        <!-- PHYSICS 4 -->
         <div class="sim-card">
           <div class="sim-header">
-            <span class="sim-brand">
-              <span class="sim-logo">∑</span>
-              <span class="sim-brand-text">Scientia</span>
-            </span>
+            <span class="sim-brand"><span class="sim-logo">∑</span><span class="sim-brand-text">Scientia</span></span>
             <span class="sim-tag physics">Physics</span>
           </div>
-          <div class="sim-preview">
-            <iframe data-src="https://phet.colorado.edu/sims/html/pendulum-lab/latest/pendulum-lab_en.html" allowfullscreen title="Pendulum Lab"></iframe>
-          </div>
+          <div class="sim-preview"><iframe data-src="https://phet.colorado.edu/sims/html/pendulum-lab/latest/pendulum-lab_en.html" allowfullscreen title="Pendulum Lab"></iframe></div>
           <div class="sim-info">
             <h3>Pendulum Lab</h3>
             <p>Discover how length, mass, and gravity affect a pendulum's swing.</p>
@@ -279,13 +255,42 @@
           </div>
         </div>
 
+        <!-- PHYSICS 5: ELECTROMAGNETISM GAME (CUSTOM) -->
+        <div class="sim-card calc-card">
+          <div class="sim-header">
+            <span class="sim-brand"><span class="sim-logo">∑</span><span class="sim-brand-text">Scientia</span></span>
+            <span class="sim-tag physics">Physics · Original</span>
+          </div>
+          <div class="sim-preview calc-preview">
+            <canvas id="emPreview" width="400" height="250"></canvas>
+          </div>
+          <div class="sim-info">
+            <h3>Electromagnetism ⚡</h3>
+            <p>Two modes: <strong>Electron Force</strong> & <strong>Wire Force</strong>. Predict magnetic direction.</p>
+            <button class="btn-play" onclick="openEMGame()">▶ Play Electromagnetism</button>
+            <span class="sim-credit">⭐ Built by Scientia · 100% original</span>
+          </div>
+        </div>
+
+        <div class="sim-card">
+          <div class="sim-header">
+            <span class="sim-brand"><span class="sim-logo">∑</span><span class="sim-brand-text">Scientia</span></span>
+            <span class="sim-tag physics">Physics</span>
+          </div>
+          <div class="sim-preview"><iframe data-src="https://phet.colorado.edu/sims/html/gravity-and-orbits/latest/gravity-and-orbits_en.html" allowfullscreen title="Gravity and Orbits"></iframe></div>
+          <div class="sim-info">
+            <h3>Gravity & Orbits</h3>
+            <p>Move the sun, earth, and moon to see how gravity shapes orbits.</p>
+            <button class="btn-play" onclick="openSim('https://phet.colorado.edu/sims/html/gravity-and-orbits/latest/gravity-and-orbits_en.html')">▶ Launch on Scientia</button>
+            <span class="sim-credit">Powered by PhET · University of Colorado Boulder</span>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
 
-  <!-- ============================================================
-       SCREEN 5: CHEMISTRY (4 sims)
-  ============================================================= -->
+  <!-- ===== SCREEN 5: CHEMISTRY (6 sims) ===== -->
   <section id="chemistry" class="screen">
     <div class="screen-inner">
       <button class="back-btn" onclick="showScreen('subjects')">← Back to Subjects</button>
@@ -293,21 +298,14 @@
         <h2>🧪 Chemistry Simulations</h2>
         <p>See chemistry in action</p>
       </div>
-
       <div class="sim-grid">
 
-        <!-- CHEMISTRY 1 -->
         <div class="sim-card">
           <div class="sim-header">
-            <span class="sim-brand">
-              <span class="sim-logo">∑</span>
-              <span class="sim-brand-text">Scientia</span>
-            </span>
+            <span class="sim-brand"><span class="sim-logo">∑</span><span class="sim-brand-text">Scientia</span></span>
             <span class="sim-tag chemistry">Chemistry</span>
           </div>
-          <div class="sim-preview">
-            <iframe data-src="https://phet.colorado.edu/sims/html/build-an-atom/latest/build-an-atom_en.html" allowfullscreen title="Build an Atom"></iframe>
-          </div>
+          <div class="sim-preview"><iframe data-src="https://phet.colorado.edu/sims/html/build-an-atom/latest/build-an-atom_en.html" allowfullscreen title="Build an Atom"></iframe></div>
           <div class="sim-info">
             <h3>Build an Atom</h3>
             <p>Add protons, neutrons, and electrons to build atoms and identify elements.</p>
@@ -316,18 +314,12 @@
           </div>
         </div>
 
-        <!-- CHEMISTRY 2 -->
         <div class="sim-card">
           <div class="sim-header">
-            <span class="sim-brand">
-              <span class="sim-logo">∑</span>
-              <span class="sim-brand-text">Scientia</span>
-            </span>
+            <span class="sim-brand"><span class="sim-logo">∑</span><span class="sim-brand-text">Scientia</span></span>
             <span class="sim-tag chemistry">Chemistry</span>
           </div>
-          <div class="sim-preview">
-            <iframe data-src="https://phet.colorado.edu/sims/html/states-of-matter/latest/states-of-matter_en.html" allowfullscreen title="States of Matter"></iframe>
-          </div>
+          <div class="sim-preview"><iframe data-src="https://phet.colorado.edu/sims/html/states-of-matter/latest/states-of-matter_en.html" allowfullscreen title="States of Matter"></iframe></div>
           <div class="sim-info">
             <h3>States of Matter</h3>
             <p>See how atoms and molecules behave in solid, liquid, and gas states.</p>
@@ -336,18 +328,12 @@
           </div>
         </div>
 
-        <!-- CHEMISTRY 3 -->
         <div class="sim-card">
           <div class="sim-header">
-            <span class="sim-brand">
-              <span class="sim-logo">∑</span>
-              <span class="sim-brand-text">Scientia</span>
-            </span>
+            <span class="sim-brand"><span class="sim-logo">∑</span><span class="sim-brand-text">Scientia</span></span>
             <span class="sim-tag chemistry">Chemistry</span>
           </div>
-          <div class="sim-preview">
-            <iframe data-src="https://phet.colorado.edu/sims/html/ph-scale/latest/ph-scale_en.html" allowfullscreen title="pH Scale"></iframe>
-          </div>
+          <div class="sim-preview"><iframe data-src="https://phet.colorado.edu/sims/html/ph-scale/latest/ph-scale_en.html" allowfullscreen title="pH Scale"></iframe></div>
           <div class="sim-info">
             <h3>pH Scale</h3>
             <p>Test everyday liquids to see if they are acidic, basic, or neutral.</p>
@@ -356,18 +342,12 @@
           </div>
         </div>
 
-        <!-- CHEMISTRY 4 -->
         <div class="sim-card">
           <div class="sim-header">
-            <span class="sim-brand">
-              <span class="sim-logo">∑</span>
-              <span class="sim-brand-text">Scientia</span>
-            </span>
+            <span class="sim-brand"><span class="sim-logo">∑</span><span class="sim-brand-text">Scientia</span></span>
             <span class="sim-tag chemistry">Chemistry</span>
           </div>
-          <div class="sim-preview">
-            <iframe data-src="https://phet.colorado.edu/sims/html/balancing-chemical-equations/latest/balancing-chemical-equations_en.html" allowfullscreen title="Balancing Equations"></iframe>
-          </div>
+          <div class="sim-preview"><iframe data-src="https://phet.colorado.edu/sims/html/balancing-chemical-equations/latest/balancing-chemical-equations_en.html" allowfullscreen title="Balancing Equations"></iframe></div>
           <div class="sim-info">
             <h3>Balancing Equations</h3>
             <p>Balance chemical equations like a pro with interactive tools.</p>
@@ -376,53 +356,146 @@
           </div>
         </div>
 
+        <div class="sim-card">
+          <div class="sim-header">
+            <span class="sim-brand"><span class="sim-logo">∑</span><span class="sim-brand-text">Scientia</span></span>
+            <span class="sim-tag chemistry">Chemistry</span>
+          </div>
+          <div class="sim-preview"><iframe data-src="https://phet.colorado.edu/sims/html/molecule-shapes/latest/molecule-shapes_en.html" allowfullscreen title="Molecule Shapes"></iframe></div>
+          <div class="sim-info">
+            <h3>Molecule Shapes</h3>
+            <p>Explore 3D molecular geometry with interactive models.</p>
+            <button class="btn-play" onclick="openSim('https://phet.colorado.edu/sims/html/molecule-shapes/latest/molecule-shapes_en.html')">▶ Launch on Scientia</button>
+            <span class="sim-credit">Powered by PhET · University of Colorado Boulder</span>
+          </div>
+        </div>
+
+        <div class="sim-card">
+          <div class="sim-header">
+            <span class="sim-brand"><span class="sim-logo">∑</span><span class="sim-brand-text">Scientia</span></span>
+            <span class="sim-tag chemistry">Chemistry</span>
+          </div>
+          <div class="sim-preview"><iframe data-src="https://phet.colorado.edu/sims/html/build-a-molecule/latest/build-a-molecule_en.html" allowfullscreen title="Build a Molecule"></iframe></div>
+          <div class="sim-info">
+            <h3>Build a Molecule</h3>
+            <p>Combine atoms to create molecules and learn chemical bonding.</p>
+            <button class="btn-play" onclick="openSim('https://phet.colorado.edu/sims/html/build-a-molecule/latest/build-a-molecule_en.html')">▶ Launch on Scientia</button>
+            <span class="sim-credit">Powered by PhET · University of Colorado Boulder</span>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
 
-  <!-- ============================================================
-       SCREEN 6: ABOUT
-  ============================================================= -->
+  <!-- ===== SCREEN 6: ABOUT ===== -->
   <section id="about" class="screen">
     <div class="screen-inner">
       <button class="back-btn" onclick="showScreen('home')">← Back Home</button>
-      <div class="section-header">
-        <h2>About Scientia</h2>
-      </div>
+      <div class="section-header"><h2>About Scientia</h2></div>
       <p class="about-text">
         <strong>Scientia</strong> (Latin for "knowledge") brings world-class interactive
         simulations into a clean, distraction-free space. Simulations powered by
         <a href="https://phet.colorado.edu" target="_blank" rel="noopener">PhET Interactive Simulations</a>,
-        University of Colorado Boulder.
+        University of Colorado Boulder. The Calculus Game and Electromagnetism Game are original Scientia content.
       </p>
     </div>
   </section>
 
-  <!-- ===== FOOTER ===== -->
   <footer>
     <div class="footer-logo">∑ Scientia</div>
     <p>© 2026 Scientia · Powered by <a href="https://phet.colorado.edu" target="_blank" rel="noopener">PhET</a></p>
   </footer>
 
-  <!-- ===== FULLSCREEN MODAL ===== -->
+  <!-- ===== PHET FULLSCREEN MODAL ===== -->
   <div id="simModal" class="modal" role="dialog" aria-modal="true">
     <div class="modal-content">
       <div class="modal-header">
-        <span class="sim-brand">
-          <span class="sim-logo">∑</span>
-          <span class="sim-brand-text">Scientia</span>
-        </span>
+        <span class="sim-brand"><span class="sim-logo">∑</span><span class="sim-brand-text">Scientia</span></span>
         <button class="modal-close" onclick="closeSim()" aria-label="Close">✕</button>
       </div>
       <iframe id="modalFrame" src="" allowfullscreen title="Simulation"></iframe>
     </div>
   </div>
 
+  <!-- ===== CALCULUS GAME MODAL ===== -->
+  <div id="calcModal" class="modal" role="dialog" aria-modal="true">
+    <div class="modal-content calc-modal-content">
+      <div class="modal-header">
+        <span class="sim-brand">
+          <span class="sim-logo">∫</span>
+          <span class="sim-brand-text">Calculus Game</span>
+        </span>
+        <button class="modal-close" onclick="closeCalcGame()" aria-label="Close">✕</button>
+      </div>
+
+      <div class="calc-body">
+        <div class="calc-modes">
+          <button class="calc-mode active" id="modeDiff" onclick="setCalcMode('diff')">d/dx Differentiation</button>
+          <button class="calc-mode" id="modeInt" onclick="setCalcMode('int')">∫ Integration</button>
+        </div>
+
+        <div class="calc-hud">
+          <div>Score: <span id="calcScore">0</span></div>
+          <div>Streak: <span id="calcStreak">0</span> 🔥</div>
+          <div>Best: <span id="calcBest">0</span></div>
+        </div>
+
+        <div class="calc-question">
+          <div class="calc-label" id="calcLabel">Differentiate</div>
+          <div class="calc-expr" id="calcExpr">f(x) = x²</div>
+        </div>
+
+        <div class="calc-options" id="calcOptions"></div>
+
+        <div class="calc-feedback" id="calcFeedback"></div>
+
+        <button class="calc-reset" onclick="resetCalcGame()">↺ Reset Game</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== ELECTROMAGNETISM GAME MODAL ===== -->
+  <div id="emModal" class="modal" role="dialog" aria-modal="true">
+    <div class="modal-content calc-modal-content">
+      <div class="modal-header">
+        <span class="sim-brand">
+          <span class="sim-logo">⚡</span>
+          <span class="sim-brand-text">Electromagnetism</span>
+        </span>
+        <button class="modal-close" onclick="closeEMGame()" aria-label="Close">✕</button>
+      </div>
+
+      <div class="calc-body">
+        <div class="calc-modes">
+          <button class="calc-mode active" id="modeElectron" onclick="setEMMode('electron')">e⁻ Electron Force</button>
+          <button class="calc-mode" id="modeWire" onclick="setEMMode('wire')">⚡ Wire Force</button>
+        </div>
+
+        <div class="calc-hud">
+          <div>Score: <span id="emScore">0</span></div>
+          <div>Streak: <span id="emStreak">0</span> 🔥</div>
+          <div>Best: <span id="emBest">0</span></div>
+        </div>
+
+        <div class="calc-question">
+          <div class="calc-label" id="emLabel">Force on Electron</div>
+          <div class="calc-expr" id="emExpr">What is the force direction?</div>
+        </div>
+
+        <div class="calc-options" id="emOptions"></div>
+
+        <div class="calc-feedback" id="emFeedback"></div>
+
+        <button class="calc-reset" onclick="resetEMGame()">↺ Reset Game</button>
+      </div>
+    </div>
+  </div>
+
   <script>
   /* ============================================================
-     SCIENTIA — PERFORMANCE-OPTIMIZED JAVASCRIPT
+     SCIENTIA — SCREEN ROUTER + PERFORMANCE + PWA
   ============================================================ */
-
   const screens = document.querySelectorAll('.screen');
   const validScreens = ['home', 'subjects', 'math', 'physics', 'chemistry', 'about'];
 
@@ -433,9 +506,7 @@
     if (target) target.classList.add('active');
     loadSimsFor(id);
     window.scrollTo({ top: 0, behavior: 'smooth' });
-    if (location.hash !== '#' + id) {
-      history.pushState({ screen: id }, '', '#' + id);
-    }
+    if (location.hash !== '#' + id) history.pushState({ screen: id }, '', '#' + id);
     const titles = {
       home: 'Scientia — Learn Math, Physics & Chemistry',
       subjects: 'Subjects · Scientia',
@@ -461,9 +532,7 @@
   function loadSimsFor(screenId) {
     const screen = document.getElementById(screenId);
     if (!screen) return;
-    screen.querySelectorAll('iframe[data-src]').forEach(iframe => {
-      simObserver.observe(iframe);
-    });
+    screen.querySelectorAll('iframe[data-src]').forEach(iframe => simObserver.observe(iframe));
   }
 
   function openSim(url) {
@@ -473,7 +542,6 @@
     modal.classList.add('active');
     document.body.style.overflow = 'hidden';
   }
-
   function closeSim() {
     const modal = document.getElementById('simModal');
     const frame = document.getElementById('modalFrame');
@@ -482,39 +550,24 @@
     document.body.style.overflow = 'auto';
   }
 
-  document.addEventListener('keydown', e => {
-    if (e.key === 'Escape') closeSim();
-  });
-
   window.addEventListener('popstate', (e) => {
     const id = (e.state && e.state.screen) || location.hash.replace('#', '') || 'home';
     showScreen(id);
   });
-
   document.addEventListener('DOMContentLoaded', () => {
     const initial = location.hash.replace('#', '') || 'home';
     showScreen(initial);
+    initCalcPreview();
+    initEMPreview();
   });
-
   document.addEventListener('keydown', e => {
     if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+    if (e.key === 'Escape') { closeSim(); closeCalcGame(); closeEMGame(); }
     if (e.key === '1') showScreen('math');
     if (e.key === '2') showScreen('physics');
     if (e.key === '3') showScreen('chemistry');
     if (e.key === 'h' || e.key === 'H') showScreen('home');
     if (e.key === 's' || e.key === 'S') showScreen('subjects');
-  });
-
-  const pauseObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      const iframe = entry.target;
-      if (!iframe.src) return;
-      iframe.style.visibility = entry.isIntersecting ? 'visible' : 'hidden';
-    });
-  }, { rootMargin: '100px' });
-
-  document.querySelectorAll('.sim-preview iframe').forEach(iframe => {
-    pauseObserver.observe(iframe);
   });
 
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
@@ -523,9 +576,7 @@
 
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
-      navigator.serviceWorker.register('sw.js')
-        .then(reg => console.log('✅ Scientia SW registered:', reg.scope))
-        .catch(err => console.log('❌ SW registration failed:', err));
+      navigator.serviceWorker.register('sw.js').catch(()=>{});
     });
   }
 
@@ -536,18 +587,403 @@
     const btn = document.getElementById('installBtn');
     if (btn) btn.style.display = 'inline-block';
   });
-
   function installScientia() {
     if (!deferredPrompt) return;
     deferredPrompt.prompt();
-    deferredPrompt.userChoice.then(choice => {
-      if (choice.outcome === 'accepted') console.log('✅ Scientia installed');
+    deferredPrompt.userChoice.then(() => {
       deferredPrompt = null;
       const btn = document.getElementById('installBtn');
       if (btn) btn.style.display = 'none';
     });
   }
+
+  function pickRandom(arr) { return arr[Math.floor(Math.random() * arr.length)]; }
+
+  /* ============================================================
+     CALCULUS GAME (Scientia Original)
+  ============================================================ */
+  const CALC = {
+    mode: 'diff',
+    score: 0,
+    streak: 0,
+    best: 0,
+    current: null,
+    answered: false
+  };
+
+  const DIFF_PROBLEMS = [
+    { f: "x²",         d: "2x" },
+    { f: "x³",         d: "3x²" },
+    { f: "x⁴",         d: "4x³" },
+    { f: "5x",         d: "5" },
+    { f: "7x²",        d: "14x" },
+    { f: "3x³",        d: "9x²" },
+    { f: "x² + 3x",    d: "2x + 3" },
+    { f: "x³ − x",     d: "3x² − 1" },
+    { f: "sin(x)",     d: "cos(x)" },
+    { f: "cos(x)",     d: "−sin(x)" },
+    { f: "eˣ",         d: "eˣ" },
+    { f: "ln(x)",      d: "1/x" },
+    { f: "√x",         d: "1/(2√x)" },
+    { f: "1/x",        d: "−1/x²" },
+    { f: "x²·eˣ",      d: "eˣ(x² + 2x)" }
+  ];
+
+  const INT_PROBLEMS = [
+    { f: "2x",         a: "x² + C" },
+    { f: "3x²",        a: "x³ + C" },
+    { f: "4x³",        a: "x⁴ + C" },
+    { f: "5",          a: "5x + C" },
+    { f: "x",          a: "x²/2 + C" },
+    { f: "x²",         a: "x³/3 + C" },
+    { f: "1/x",        a: "ln|x| + C" },
+    { f: "eˣ",         a: "eˣ + C" },
+    { f: "cos(x)",     a: "sin(x) + C" },
+    { f: "sin(x)",     a: "−cos(x) + C" },
+    { f: "2x + 3",     a: "x² + 3x + C" },
+    { f: "6x² − 2x",   a: "2x³ − x² + C" }
+  ];
+
+  function makeWrongAnswers(correct, pool) {
+    const wrongs = pool.filter(p => p !== correct);
+    const shuffled = wrongs.sort(() => Math.random() - 0.5);
+    return shuffled.slice(0, 2);
+  }
+
+  function newCalcProblem() {
+    CALC.answered = false;
+    const feedback = document.getElementById('calcFeedback');
+    feedback.textContent = '';
+    feedback.className = 'calc-feedback';
+
+    if (CALC.mode === 'diff') {
+      const p = pickRandom(DIFF_PROBLEMS);
+      const wrongs = makeWrongAnswers(p.d, DIFF_PROBLEMS.map(x => x.d));
+      CALC.current = { question: p.f, correct: p.d, options: [p.d, ...wrongs].sort(() => Math.random() - 0.5) };
+      document.getElementById('calcLabel').textContent = 'Differentiate';
+      document.getElementById('calcExpr').innerHTML = `f(x) = ${p.f}`;
+    } else {
+      const p = pickRandom(INT_PROBLEMS);
+      const wrongs = makeWrongAnswers(p.a, INT_PROBLEMS.map(x => x.a));
+      CALC.current = { question: p.f, correct: p.a, options: [p.a, ...wrongs].sort(() => Math.random() - 0.5) };
+      document.getElementById('calcLabel').textContent = 'Integrate';
+      document.getElementById('calcExpr').innerHTML = `∫ ${p.f} dx`;
+    }
+    renderCalcOptions();
+  }
+
+  function renderCalcOptions() {
+    const box = document.getElementById('calcOptions');
+    box.innerHTML = '';
+    CALC.current.options.forEach(opt => {
+      const btn = document.createElement('button');
+      btn.className = 'calc-option';
+      btn.textContent = opt;
+      btn.onclick = () => checkCalcAnswer(opt, btn);
+      box.appendChild(btn);
+    });
+  }
+
+  function checkCalcAnswer(chosen, btn) {
+    if (CALC.answered) return;
+    CALC.answered = true;
+    const correct = CALC.current.correct;
+    const feedback = document.getElementById('calcFeedback');
+
+    if (chosen === correct) {
+      CALC.score += 10 + CALC.streak * 2;
+      CALC.streak += 1;
+      if (CALC.streak > CALC.best) CALC.best = CALC.streak;
+      btn.classList.add('correct');
+      feedback.textContent = `✅ Correct! +${10 + (CALC.streak - 1) * 2} pts`;
+      feedback.className = 'calc-feedback ok';
+    } else {
+      CALC.streak = 0;
+      btn.classList.add('wrong');
+      document.querySelectorAll('#calcOptions .calc-option').forEach(b => {
+        if (b.textContent === correct) b.classList.add('correct');
+      });
+      feedback.textContent = `❌ Answer: ${correct}`;
+      feedback.className = 'calc-feedback bad';
+    }
+
+    document.getElementById('calcScore').textContent = CALC.score;
+    document.getElementById('calcStreak').textContent = CALC.streak;
+    document.getElementById('calcBest').textContent = CALC.best;
+
+    setTimeout(newCalcProblem, 1200);
+  }
+
+  function setCalcMode(mode) {
+    CALC.mode = mode;
+    document.getElementById('modeDiff').classList.toggle('active', mode === 'diff');
+    document.getElementById('modeInt').classList.toggle('active', mode === 'int');
+    newCalcProblem();
+  }
+
+  function resetCalcGame() {
+    CALC.score = 0;
+    CALC.streak = 0;
+    CALC.best = 0;
+    document.getElementById('calcScore').textContent = 0;
+    document.getElementById('calcStreak').textContent = 0;
+    document.getElementById('calcBest').textContent = 0;
+    newCalcProblem();
+  }
+
+  function openCalcGame() {
+    document.getElementById('calcModal').classList.add('active');
+    document.body.style.overflow = 'hidden';
+    newCalcProblem();
+  }
+  function closeCalcGame() {
+    document.getElementById('calcModal').classList.remove('active');
+    document.body.style.overflow = 'auto';
+  }
+
+  function initCalcPreview() {
+    const c = document.getElementById('calcPreview');
+    if (!c) return;
+    const ctx = c.getContext('2d');
+    const W = c.width, H = c.height;
+
+    ctx.fillStyle = '#0a0f1e';
+    ctx.fillRect(0, 0, W, H);
+
+    ctx.strokeStyle = 'rgba(148,163,184,0.12)';
+    ctx.lineWidth = 1;
+    for (let x = 0; x < W; x += 25) { ctx.beginPath(); ctx.moveTo(x,0); ctx.lineTo(x,H); ctx.stroke(); }
+    for (let y = 0; y < H; y += 25) { ctx.beginPath(); ctx.moveTo(0,y); ctx.lineTo(W,y); ctx.stroke(); }
+
+    ctx.strokeStyle = '#3b82f6';
+    ctx.lineWidth = 2.5;
+    ctx.beginPath();
+    for (let x = 0; x < W; x++) {
+      const y = H/2 - Math.sin((x/W) * Math.PI * 4) * 60;
+      if (x === 0) ctx.moveTo(x, y); else ctx.lineTo(x, y);
+    }
+    ctx.stroke();
+
+    ctx.fillStyle = 'rgba(168,85,247,0.25)';
+    ctx.beginPath();
+    ctx.moveTo(0, H/2);
+    for (let x = 0; x < W; x++) {
+      const y = H/2 - Math.sin((x/W) * Math.PI * 4) * 60;
+      ctx.lineTo(x, y);
+    }
+    ctx.lineTo(W, H/2);
+    ctx.closePath();
+    ctx.fill();
+
+    ctx.strokeStyle = '#fbbf24';
+    ctx.lineWidth = 2;
+    const tx = W * 0.35;
+    const ty = H/2 - Math.sin((tx/W) * Math.PI * 4) * 60;
+    ctx.beginPath();
+    ctx.moveTo(tx - 40, ty + 20);
+    ctx.lineTo(tx + 40, ty - 20);
+    ctx.stroke();
+
+    ctx.fillStyle = '#e8edf7';
+    ctx.font = 'bold 16px Georgia, serif';
+    ctx.fillText('∫ f(x) dx', 15, 30);
+    ctx.fillStyle = '#fbbf24';
+    ctx.font = '13px Georgia, serif';
+    ctx.fillText("f'(x)", W - 55, 30);
+  }
+
+  /* ============================================================
+     ELECTROMAGNETISM GAME (Scientia Original)
+  ============================================================ */
+  const EM = {
+    mode: 'electron',
+    score: 0,
+    streak: 0,
+    best: 0,
+    current: null,
+    answered: false
+  };
+
+  const ELECTRON_PROBLEMS = [
+    { v: "→", B: "Into page ⊗", F: "Down ↓" },
+    { v: "→", B: "Out of page ⊙", F: "Up ↑" },
+    { v: "↑", B: "Into page ⊗", F: "Right →" },
+    { v: "↑", B: "Out of page ⊙", F: "Left ←" },
+    { v: "←", B: "Into page ⊗", F: "Up ↑" },
+    { v: "←", B: "Out of page ⊙", F: "Down ↓" },
+    { v: "↓", B: "Into page ⊗", F: "Left ←" },
+    { v: "↓", B: "Out of page ⊙", F: "Right →" }
+  ];
+
+  const WIRE_PROBLEMS = [
+    { I: "→", B: "Into page ⊗", F: "Down ↓" },
+    { I: "→", B: "Out of page ⊙", F: "Up ↑" },
+    { I: "↑", B: "Into page ⊗", F: "Right →" },
+    { I: "↑", B: "Out of page ⊙", F: "Left ←" },
+    { I: "←", B: "Into page ⊗", F: "Up ↑" },
+    { I: "←", B: "Out of page ⊙", F: "Down ↓" },
+    { I: "↓", B: "Into page ⊗", F: "Left ←" },
+    { I: "↓", B: "Out of page ⊙", F: "Right →" }
+  ];
+
+  function newEMProblem() {
+    EM.answered = false;
+    const feedback = document.getElementById('emFeedback');
+    feedback.textContent = '';
+    feedback.className = 'calc-feedback';
+
+    const pool = EM.mode === 'electron' ? ELECTRON_PROBLEMS : WIRE_PROBLEMS;
+    const p = pickRandom(pool);
+    const label = EM.mode === 'electron' ? 'Force on Electron' : 'Force on Wire';
+    const expr = EM.mode === 'electron'
+      ? `v = ${p.v} · B = ${p.B}`
+      : `I = ${p.I} · B = ${p.B}`;
+
+    const allForces = ['Up ↑', 'Down ↓', 'Left ←', 'Right →'];
+    const wrongs = allForces.filter(f => f !== p.F).sort(() => Math.random() - 0.5).slice(0, 2);
+    const options = [p.F, ...wrongs].sort(() => Math.random() - 0.5);
+
+    EM.current = { question: expr, correct: p.F, options };
+    document.getElementById('emLabel').textContent = label;
+    document.getElementById('emExpr').textContent = expr;
+    renderEMOptions();
+  }
+
+  function renderEMOptions() {
+    const box = document.getElementById('emOptions');
+    box.innerHTML = '';
+    EM.current.options.forEach(opt => {
+      const btn = document.createElement('button');
+      btn.className = 'calc-option';
+      btn.textContent = opt;
+      btn.onclick = () => checkEMAnswer(opt, btn);
+      box.appendChild(btn);
+    });
+  }
+
+  function checkEMAnswer(chosen, btn) {
+    if (EM.answered) return;
+    EM.answered = true;
+    const correct = EM.current.correct;
+    const feedback = document.getElementById('emFeedback');
+
+    if (chosen === correct) {
+      EM.score += 10 + EM.streak * 2;
+      EM.streak += 1;
+      if (EM.streak > EM.best) EM.best = EM.streak;
+      btn.classList.add('correct');
+      feedback.textContent = `✅ Correct! +${10 + (EM.streak - 1) * 2} pts`;
+      feedback.className = 'calc-feedback ok';
+    } else {
+      EM.streak = 0;
+      btn.classList.add('wrong');
+      document.querySelectorAll('#emOptions .calc-option').forEach(b => {
+        if (b.textContent === correct) b.classList.add('correct');
+      });
+      feedback.textContent = `❌ Answer: ${correct}`;
+      feedback.className = 'calc-feedback bad';
+    }
+
+    document.getElementById('emScore').textContent = EM.score;
+    document.getElementById('emStreak').textContent = EM.streak;
+    document.getElementById('emBest').textContent = EM.best;
+
+    setTimeout(newEMProblem, 1200);
+  }
+
+  function setEMMode(mode) {
+    EM.mode = mode;
+    document.getElementById('modeElectron').classList.toggle('active', mode === 'electron');
+    document.getElementById('modeWire').classList.toggle('active', mode === 'wire');
+    newEMProblem();
+  }
+
+  function resetEMGame() {
+    EM.score = 0;
+    EM.streak = 0;
+    EM.best = 0;
+    document.getElementById('emScore').textContent = 0;
+    document.getElementById('emStreak').textContent = 0;
+    document.getElementById('emBest').textContent = 0;
+    newEMProblem();
+  }
+
+  function openEMGame() {
+    document.getElementById('emModal').classList.add('active');
+    document.body.style.overflow = 'hidden';
+    newEMProblem();
+  }
+  function closeEMGame() {
+    document.getElementById('emModal').classList.remove('active');
+    document.body.style.overflow = 'auto';
+  }
+
+  function initEMPreview() {
+    const c = document.getElementById('emPreview');
+    if (!c) return;
+    const ctx = c.getContext('2d');
+    const W = c.width, H = c.height;
+
+    ctx.fillStyle = '#0a0f1e';
+    ctx.fillRect(0, 0, W, H);
+
+    ctx.strokeStyle = 'rgba(59,130,246,0.3)';
+    ctx.lineWidth = 1.5;
+    for (let i = 0; i < 6; i++) {
+      for (let j = 0; j < 4; j++) {
+        const x = 50 + i * 60;
+        const y = 40 + j * 60;
+        ctx.beginPath();
+        ctx.arc(x, y, 8, 0, Math.PI * 2);
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.moveTo(x - 4, y - 4); ctx.lineTo(x + 4, y + 4);
+        ctx.moveTo(x + 4, y - 4); ctx.lineTo(x - 4, y + 4);
+        ctx.stroke();
+      }
+    }
+
+    ctx.fillStyle = '#3b82f6';
+    ctx.beginPath();
+    ctx.arc(W * 0.25, H * 0.5, 10, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.fillStyle = 'white';
+    ctx.font = 'bold 14px sans-serif';
+    ctx.fillText('e⁻', W * 0.25 - 7, H * 0.5 + 5);
+
+    ctx.strokeStyle = '#fbbf24';
+    ctx.lineWidth = 2.5;
+    ctx.beginPath();
+    ctx.moveTo(W * 0.32, H * 0.5);
+    ctx.lineTo(W * 0.5, H * 0.5);
+    ctx.stroke();
+    ctx.beginPath();
+    ctx.moveTo(W * 0.48, H * 0.46);
+    ctx.lineTo(W * 0.5, H * 0.5);
+    ctx.lineTo(W * 0.48, H * 0.54);
+    ctx.stroke();
+
+    ctx.strokeStyle = '#ef4444';
+    ctx.beginPath();
+    ctx.moveTo(W * 0.25, H * 0.6);
+    ctx.lineTo(W * 0.25, H * 0.78);
+    ctx.stroke();
+    ctx.beginPath();
+    ctx.moveTo(W * 0.21, H * 0.75);
+    ctx.lineTo(W * 0.25, H * 0.78);
+    ctx.lineTo(W * 0.29, H * 0.75);
+    ctx.stroke();
+
+    ctx.fillStyle = '#e8edf7';
+    ctx.font = 'bold 14px Georgia, serif';
+    ctx.fillText('F = qv × B', 15, 30);
+    ctx.fillStyle = '#fbbf24';
+    ctx.font = '11px Georgia, serif';
+    ctx.fillText('v', W * 0.4, H * 0.44);
+    ctx.fillStyle = '#ef4444';
+    ctx.fillText('F', W * 0.16, H * 0.7);
+  }
   </script>
 
 </body>
-									   </html>
+</html>
