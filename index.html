@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="google-site-verification" content="y2Q6Kpm0nWdccgpcopyJ7eLYfKuViRFq-VtMoVpLxbQ">
-  <title>Scientia — Learn Math, Physics & Chemistry by Playing</title>
-  <meta name="description" content="Scientia: Interactive 2D simulations and games for Math, Physics, and Chemistry. Free for everyone.">
+  <title>Scientia — Learn Math, Physics, Chemistry & Biology by Playing</title>
+  <meta name="description" content="Scientia: Interactive 2D simulations for Math, Physics, Chemistry, and Biology. Free for everyone.">
   <meta name="theme-color" content="#0b1220">
 
   <link rel="manifest" href="manifest.json">
@@ -37,7 +37,7 @@
   <section id="home" class="screen active">
     <div class="hero-content">
       <h1>Learn by <span class="gradient-text">Playing</span></h1>
-      <p>Interactive 2D simulations for Math, Physics & Chemistry — built for curious minds.</p>
+      <p>Interactive 2D simulations for Math, Physics, Chemistry & Biology — built for curious minds.</p>
       <button class="btn-primary" onclick="showScreen('subjects')">Start Exploring →</button>
     </div>
     <div class="hero-bg" aria-hidden="true">
@@ -51,7 +51,7 @@
     <div class="screen-inner">
       <div class="section-header">
         <h2>Choose a Subject</h2>
-        <p>Three worlds of discovery</p>
+        <p>Four worlds of discovery</p>
       </div>
       <div class="cards">
         <button class="card math" onclick="showScreen('math')">
@@ -72,6 +72,12 @@
           <p>Atoms, Bonds, Reactions & States</p>
           <span class="card-count">9 simulations</span>
         </button>
+        <button class="card biology" onclick="showScreen('biology')">
+          <div class="card-icon">🧬</div>
+          <h3>Biology</h3>
+          <p>Explore life, genetics, and ecosystems</p>
+          <span class="card-count">9 simulations</span>
+        </button>
       </div>
     </div>
   </section>
@@ -84,7 +90,6 @@
         <h2><span class="header-icon">∫</span> Mathematics Simulations</h2>
         <p>Visualize math like never before</p>
       </div>
-
       <div class="sim-grid">
 
         <div class="sim-card">
@@ -92,9 +97,7 @@
             <span class="sim-brand"><span class="sim-logo">∑</span><span class="sim-brand-text">Scientia</span></span>
             <span class="sim-tag math">Math</span>
           </div>
-          <div class="sim-preview">
-            <iframe data-src="https://phet.colorado.edu/sims/html/fractions-intro/latest/fractions-intro_en.html" allowfullscreen title="Fractions Intro"></iframe>
-          </div>
+          <div class="sim-preview"><iframe data-src="https://phet.colorado.edu/sims/html/fractions-intro/latest/fractions-intro_en.html" allowfullscreen title="Fractions Intro"></iframe></div>
           <div class="sim-info">
             <h3>Fractions Intro</h3>
             <p>Visualize fractions with shapes, number lines, and interactive games.</p>
@@ -108,9 +111,7 @@
             <span class="sim-brand"><span class="sim-logo">∑</span><span class="sim-brand-text">Scientia</span></span>
             <span class="sim-tag math">Math</span>
           </div>
-          <div class="sim-preview">
-            <iframe data-src="https://phet.colorado.edu/sims/html/graphing-lines/latest/graphing-lines_en.html" allowfullscreen title="Graphing Lines"></iframe>
-          </div>
+          <div class="sim-preview"><iframe data-src="https://phet.colorado.edu/sims/html/graphing-lines/latest/graphing-lines_en.html" allowfullscreen title="Graphing Lines"></iframe></div>
           <div class="sim-info">
             <h3>Graphing Lines</h3>
             <p>Explore slope-intercept form and graph linear equations.</p>
@@ -124,9 +125,7 @@
             <span class="sim-brand"><span class="sim-logo">∑</span><span class="sim-brand-text">Scientia</span></span>
             <span class="sim-tag math">Math</span>
           </div>
-          <div class="sim-preview">
-            <iframe data-src="https://phet.colorado.edu/sims/html/area-builder/latest/area-builder_en.html" allowfullscreen title="Area Builder"></iframe>
-          </div>
+          <div class="sim-preview"><iframe data-src="https://phet.colorado.edu/sims/html/area-builder/latest/area-builder_en.html" allowfullscreen title="Area Builder"></iframe></div>
           <div class="sim-info">
             <h3>Area Builder</h3>
             <p>Build shapes and explore the relationship between area and perimeter.</p>
@@ -140,9 +139,7 @@
             <span class="sim-brand"><span class="sim-logo">∑</span><span class="sim-brand-text">Scientia</span></span>
             <span class="sim-tag math">Math</span>
           </div>
-          <div class="sim-preview">
-            <iframe data-src="https://phet.colorado.edu/sims/html/graphing-quadratics/latest/graphing-quadratics_en.html" allowfullscreen title="Graphing Quadratics"></iframe>
-          </div>
+          <div class="sim-preview"><iframe data-src="https://phet.colorado.edu/sims/html/graphing-quadratics/latest/graphing-quadratics_en.html" allowfullscreen title="Graphing Quadratics"></iframe></div>
           <div class="sim-info">
             <h3>Graphing Quadratics</h3>
             <p>Discover how a, b, and c change the shape of a parabola.</p>
@@ -156,9 +153,7 @@
             <span class="sim-brand"><span class="sim-logo">∑</span><span class="sim-brand-text">Scientia</span></span>
             <span class="sim-tag math">Math</span>
           </div>
-          <div class="sim-preview">
-            <iframe data-src="https://phet.colorado.edu/sims/html/trig-tour/latest/trig-tour_en.html" allowfullscreen title="Trig Tour"></iframe>
-          </div>
+          <div class="sim-preview"><iframe data-src="https://phet.colorado.edu/sims/html/trig-tour/latest/trig-tour_en.html" allowfullscreen title="Trig Tour"></iframe></div>
           <div class="sim-info">
             <h3>Trig Tour</h3>
             <p>Explore sine, cosine, and tangent on the unit circle.</p>
@@ -172,9 +167,7 @@
             <span class="sim-brand"><span class="sim-logo">∑</span><span class="sim-brand-text">Scientia</span></span>
             <span class="sim-tag math">Math</span>
           </div>
-          <div class="sim-preview">
-            <iframe data-src="https://phet.colorado.edu/sims/html/function-builder/latest/function-builder_en.html" allowfullscreen title="Function Builder"></iframe>
-          </div>
+          <div class="sim-preview"><iframe data-src="https://phet.colorado.edu/sims/html/function-builder/latest/function-builder_en.html" allowfullscreen title="Function Builder"></iframe></div>
           <div class="sim-info">
             <h3>Function Builder</h3>
             <p>Play with functions by feeding numbers and watching outputs change.</p>
@@ -188,9 +181,7 @@
             <span class="sim-brand"><span class="sim-logo">∑</span><span class="sim-brand-text">Scientia</span></span>
             <span class="sim-tag math">Math</span>
           </div>
-          <div class="sim-preview">
-            <iframe data-src="https://phet.colorado.edu/sims/html/calculus-grapher/latest/calculus-grapher_en.html" allowfullscreen title="Calculus Grapher"></iframe>
-          </div>
+          <div class="sim-preview"><iframe data-src="https://phet.colorado.edu/sims/html/calculus-grapher/latest/calculus-grapher_en.html" allowfullscreen title="Calculus Grapher"></iframe></div>
           <div class="sim-info">
             <h3>Calculus Grapher</h3>
             <p>Draw a function and instantly see its derivative and integral graphs.</p>
@@ -204,9 +195,7 @@
             <span class="sim-brand"><span class="sim-logo">∑</span><span class="sim-brand-text">Scientia</span></span>
             <span class="sim-tag math">Math</span>
           </div>
-          <div class="sim-preview">
-            <iframe data-src="https://phet.colorado.edu/sims/html/curve-fitting/latest/curve-fitting_en.html" allowfullscreen title="Curve Fitting"></iframe>
-          </div>
+          <div class="sim-preview"><iframe data-src="https://phet.colorado.edu/sims/html/curve-fitting/latest/curve-fitting_en.html" allowfullscreen title="Curve Fitting"></iframe></div>
           <div class="sim-info">
             <h3>Curve Fitting</h3>
             <p>Adjust a curve to match data points and see how changes affect the fit.</p>
@@ -220,9 +209,7 @@
             <span class="sim-brand"><span class="sim-logo">∑</span><span class="sim-brand-text">Scientia</span></span>
             <span class="sim-tag math">Math</span>
           </div>
-          <div class="sim-preview">
-            <iframe data-src="https://phet.colorado.edu/sims/html/vector-addition/latest/vector-addition_en.html" allowfullscreen title="Vector Addition"></iframe>
-          </div>
+          <div class="sim-preview"><iframe data-src="https://phet.colorado.edu/sims/html/vector-addition/latest/vector-addition_en.html" allowfullscreen title="Vector Addition"></iframe></div>
           <div class="sim-info">
             <h3>Vector Addition</h3>
             <p>Explore vectors in 1D or 2D and discover how vectors add together.</p>
@@ -515,7 +502,147 @@
     </div>
   </section>
 
-  <!-- ===== SCREEN 6: ABOUT ===== -->
+  <!-- ===== SCREEN 6: BIOLOGY (9 sims) ===== -->
+  <section id="biology" class="screen">
+    <div class="screen-inner">
+      <button class="back-btn" onclick="showScreen('subjects')">← Back to Subjects</button>
+      <div class="section-header">
+        <h2>🧬 Biology Simulations</h2>
+        <p>Explore life from molecules to ecosystems</p>
+      </div>
+      <div class="sim-grid">
+
+        <div class="sim-card">
+          <div class="sim-header">
+            <span class="sim-brand"><span class="sim-logo">∑</span><span class="sim-brand-text">Scientia</span></span>
+            <span class="sim-tag biology">Biology</span>
+          </div>
+          <div class="sim-preview"><iframe data-src="https://phet.colorado.edu/sims/html/natural-selection/latest/natural-selection_en.html" allowfullscreen title="Natural Selection"></iframe></div>
+          <div class="sim-info">
+            <h3>Natural Selection</h3>
+            <p>Explore how mutations and environmental factors drive evolution.</p>
+            <button class="btn-play" onclick="openSim('https://phet.colorado.edu/sims/html/natural-selection/latest/natural-selection_en.html')">▶ Launch on Scientia</button>
+            <span class="sim-credit">Powered by PhET · University of Colorado Boulder</span>
+          </div>
+        </div>
+
+        <div class="sim-card">
+          <div class="sim-header">
+            <span class="sim-brand"><span class="sim-logo">∑</span><span class="sim-brand-text">Scientia</span></span>
+            <span class="sim-tag biology">Biology</span>
+          </div>
+          <div class="sim-preview"><iframe data-src="https://phet.colorado.edu/sims/html/gene-machine-lac-operon/latest/gene-machine-lac-operon_en.html" allowfullscreen title="Gene Machine: The Lac Operon"></iframe></div>
+          <div class="sim-info">
+            <h3>Gene Machine: Lac Operon</h3>
+            <p>Build a gene network and explore how bacteria metabolize lactose.</p>
+            <button class="btn-play" onclick="openSim('https://phet.colorado.edu/sims/html/gene-machine-lac-operon/latest/gene-machine-lac-operon_en.html')">▶ Launch on Scientia</button>
+            <span class="sim-credit">Powered by PhET · University of Colorado Boulder</span>
+          </div>
+        </div>
+
+        <div class="sim-card">
+          <div class="sim-header">
+            <span class="sim-brand"><span class="sim-logo">∑</span><span class="sim-brand-text">Scientia</span></span>
+            <span class="sim-tag biology">Biology</span>
+          </div>
+          <div class="sim-preview"><iframe data-src="https://phet.colorado.edu/sims/html/membrane-channels/latest/membrane-channels_en.html" allowfullscreen title="Membrane Channels"></iframe></div>
+          <div class="sim-info">
+            <h3>Membrane Channels</h3>
+            <p>Insert channels into a cell membrane and see how particles move.</p>
+            <button class="btn-play" onclick="openSim('https://phet.colorado.edu/sims/html/membrane-channels/latest/membrane-channels_en.html')">▶ Launch on Scientia</button>
+            <span class="sim-credit">Powered by PhET · University of Colorado Boulder</span>
+          </div>
+        </div>
+
+        <div class="sim-card">
+          <div class="sim-header">
+            <span class="sim-brand"><span class="sim-logo">∑</span><span class="sim-brand-text">Scientia</span></span>
+            <span class="sim-tag biology">Biology</span>
+          </div>
+          <div class="sim-preview"><iframe data-src="https://phet.colorado.edu/sims/html/neuron/latest/neuron_en.html" allowfullscreen title="Neuron"></iframe></div>
+          <div class="sim-info">
+            <h3>Neuron</h3>
+            <p>Stimulate a neuron and observe ions moving across the membrane.</p>
+            <button class="btn-play" onclick="openSim('https://phet.colorado.edu/sims/html/neuron/latest/neuron_en.html')">▶ Launch on Scientia</button>
+            <span class="sim-credit">Powered by PhET · University of Colorado Boulder</span>
+          </div>
+        </div>
+
+        <div class="sim-card">
+          <div class="sim-header">
+            <span class="sim-brand"><span class="sim-logo">∑</span><span class="sim-brand-text">Scientia</span></span>
+            <span class="sim-tag biology">Biology</span>
+          </div>
+          <div class="sim-preview"><iframe data-src="https://phet.colorado.edu/sims/html/stretching-dna/latest/stretching-dna_en.html" allowfullscreen title="Stretching DNA"></iframe></div>
+          <div class="sim-info">
+            <h3>Stretching DNA</h3>
+            <p>Explore the forces involved when stretching a single strand of DNA.</p>
+            <button class="btn-play" onclick="openSim('https://phet.colorado.edu/sims/html/stretching-dna/latest/stretching-dna_en.html')">▶ Launch on Scientia</button>
+            <span class="sim-credit">Powered by PhET · University of Colorado Boulder</span>
+          </div>
+        </div>
+
+        <div class="sim-card">
+          <div class="sim-header">
+            <span class="sim-brand"><span class="sim-logo">∑</span><span class="sim-brand-text">Scientia</span></span>
+            <span class="sim-tag biology">Biology</span>
+          </div>
+          <div class="sim-preview"><iframe data-src="https://phet.colorado.edu/sims/html/molecules-and-light/latest/molecules-and-light_en.html" allowfullscreen title="Molecules and Light"></iframe></div>
+          <div class="sim-info">
+            <h3>Molecules and Light</h3>
+            <p>See how different wavelengths of light interact with molecules.</p>
+            <button class="btn-play" onclick="openSim('https://phet.colorado.edu/sims/html/molecules-and-light/latest/molecules-and-light_en.html')">▶ Launch on Scientia</button>
+            <span class="sim-credit">Powered by PhET · University of Colorado Boulder</span>
+          </div>
+        </div>
+
+        <div class="sim-card">
+          <div class="sim-header">
+            <span class="sim-brand"><span class="sim-logo">∑</span><span class="sim-brand-text">Scientia</span></span>
+            <span class="sim-tag biology">Biology</span>
+          </div>
+          <div class="sim-preview"><iframe data-src="https://phet.colorado.edu/sims/html/eating-and-exercise/latest/eating-and-exercise_en.html" allowfullscreen title="Eating and Exercise"></iframe></div>
+          <div class="sim-info">
+            <h3>Eating & Exercise</h3>
+            <p>Explore how diet and activity affect weight and energy balance.</p>
+            <button class="btn-play" onclick="openSim('https://phet.colorado.edu/sims/html/eating-and-exercise/latest/eating-and-exercise_en.html')">▶ Launch on Scientia</button>
+            <span class="sim-credit">Powered by PhET · University of Colorado Boulder</span>
+          </div>
+        </div>
+
+        <div class="sim-card">
+          <div class="sim-header">
+            <span class="sim-brand"><span class="sim-logo">∑</span><span class="sim-brand-text">Scientia</span></span>
+            <span class="sim-tag biology">Biology</span>
+          </div>
+          <div class="sim-preview"><iframe data-src="https://phet.colorado.edu/sims/html/ph-scale/latest/ph-scale_en.html" allowfullscreen title="pH Scale"></iframe></div>
+          <div class="sim-info">
+            <h3>pH Scale</h3>
+            <p>Test everyday liquids to see if they are acidic, basic, or neutral.</p>
+            <button class="btn-play" onclick="openSim('https://phet.colorado.edu/sims/html/ph-scale/latest/ph-scale_en.html')">▶ Launch on Scientia</button>
+            <span class="sim-credit">Powered by PhET · University of Colorado Boulder</span>
+          </div>
+        </div>
+
+        <div class="sim-card">
+          <div class="sim-header">
+            <span class="sim-brand"><span class="sim-logo">∑</span><span class="sim-brand-text">Scientia</span></span>
+            <span class="sim-tag biology">Biology</span>
+          </div>
+          <div class="sim-preview"><iframe data-src="https://phet.colorado.edu/sims/html/build-a-molecule/latest/build-a-molecule_en.html" allowfullscreen title="Build a Molecule"></iframe></div>
+          <div class="sim-info">
+            <h3>Build a Molecule</h3>
+            <p>Combine atoms to create molecules and learn chemical bonding.</p>
+            <button class="btn-play" onclick="openSim('https://phet.colorado.edu/sims/html/build-a-molecule/latest/build-a-molecule_en.html')">▶ Launch on Scientia</button>
+            <span class="sim-credit">Powered by PhET · University of Colorado Boulder</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SCREEN 7: ABOUT ===== -->
   <section id="about" class="screen">
     <div class="screen-inner">
       <button class="back-btn" onclick="showScreen('home')">← Back Home</button>
@@ -547,7 +674,7 @@
 
   <script>
   const screens = document.querySelectorAll('.screen');
-  const validScreens = ['home', 'subjects', 'math', 'physics', 'chemistry', 'about'];
+  const validScreens = ['home', 'subjects', 'math', 'physics', 'chemistry', 'biology', 'about'];
 
   function showScreen(id) {
     if (!validScreens.includes(id)) id = 'home';
@@ -558,11 +685,12 @@
     window.scrollTo({ top: 0, behavior: 'smooth' });
     if (location.hash !== '#' + id) history.pushState({ screen: id }, '', '#' + id);
     const titles = {
-      home: 'Scientia — Learn Math, Physics & Chemistry',
+      home: 'Scientia — Learn Math, Physics, Chemistry & Biology',
       subjects: 'Subjects · Scientia',
       math: 'Mathematics · Scientia',
       physics: 'Physics · Scientia',
       chemistry: 'Chemistry · Scientia',
+      biology: 'Biology · Scientia',
       about: 'About · Scientia'
     };
     document.title = titles[id] || titles.home;
@@ -614,6 +742,7 @@
     if (e.key === '1') showScreen('math');
     if (e.key === '2') showScreen('physics');
     if (e.key === '3') showScreen('chemistry');
+    if (e.key === '4') showScreen('biology');
     if (e.key === 'h' || e.key === 'H') showScreen('home');
     if (e.key === 's' || e.key === 'S') showScreen('subjects');
   });
